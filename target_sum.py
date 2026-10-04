@@ -1,0 +1,15 @@
+def win_sum(n):
+    arr=[0]*n + [1]*n
+    size=len(arr)
+
+    for i in range(size-n+1):
+        curr_sum=0
+        for j in range(i,i+n):
+            curr_sum+=arr[j]
+
+        if curr_sum==n:
+            return i
+    return -1
+
+print("arr of 5",win_sum(5))
+print("arr of 6",win_sum(6))
